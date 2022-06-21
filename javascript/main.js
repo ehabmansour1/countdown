@@ -17,7 +17,7 @@ let counter = setInterval(() => {
     seconds < 10 ? `0${seconds}` : seconds;
 
   if (dateDiff < 0) {
-    clearInterval(counter);
+    window.location.href = "theEnd.html";
   }
 }, 1000);
 // ----------------------loader---------
@@ -26,4 +26,13 @@ window.addEventListener("load", function () {
   setTimeout(() => {
     loader.style.display = "none";
   }, 1000);
+});
+let cap = document.querySelector(".fa-graduation-cap");
+let video = document.querySelector("video");
+cap.addEventListener("click", function () {
+  video.style.opacity = "1";
+  video.style.zIndex = "5";
+});
+cap.addEventListener("click", function () {
+  video.play();
 });
